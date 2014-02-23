@@ -15,7 +15,8 @@ Pod::Spec.new do |s|
   s.license      = 'MIT'
   s.author       = { "Stephan Leroux" => "stephanleroux@gmail.com" }
   s.source       = { :git => "https://github.com/sleroux/KVO-Blocks.git", :tag => "0.1.0" }
-  s.platform     = :ios
+  s.osx.deployment_target = '10.8'
+  s.ios.deployment_target = '6.0'
   s.source_files = 'KVO Blocks', 'KVO Blocks/*.{h,m}'
   s.requires_arc = true
 end
