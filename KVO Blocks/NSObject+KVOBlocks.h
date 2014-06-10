@@ -12,11 +12,13 @@ typedef void (^KVOBlock)(NSDictionary *change, void *context);
 
 @interface NSObject (KVOBlocks)
 
-- (void)addObserverForKeyPath:(NSString *)keyPath
-                      options:(NSKeyValueObservingOptions)options
-                      context:(void *)context
-                    withBlock:(KVOBlock)block;
+- (void)addObserver:(NSObject*)observer
+         forKeyPath:(NSString *)keyPath
+            options:(NSKeyValueObservingOptions)options
+            context:(void *)context
+          withBlock:(KVOBlock)block;
 
-- (void)removeBlockObserverForKeyPath:(NSString *)keyPath;
+- (void)removeBlockObserver:(NSObject*)observer
+                 ForKeyPath:(NSString *)keyPath;
 
 @end
